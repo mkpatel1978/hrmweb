@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All HRM Suite">
+    <listeners>
+        <listener class-name="extentReports.testListener"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" parallel="methods" thread-count="2" name="C:/HRMAutomation/hrmweb">
+        <classes>
+            <class name="loginTest"></class>
+            <class name="adminTest"></class>
+        </classes>
+
+    </test>
+</suite>
