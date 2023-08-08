@@ -62,7 +62,7 @@ public class loginTest {
         Faker faker = new Faker();
 
         String forgotPwdValidate = loginPage.forgotPage(faker.name().username());
-        Assert.assertEquals(forgotPwdValidate, "Reset Password1 link sent successfully");
+        Assert.assertEquals(forgotPwdValidate, "Reset Password link sent successfully");
 
     }
 

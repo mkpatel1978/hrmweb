@@ -17,13 +17,16 @@ public class testListener implements ITestListener {
 
     public void onTestStart(ITestResult result) {
 //        ExtentTest test =
-        extentTestManager.startTest("TestCase Name : " + result.getTestClass().getName() + " - " + result.getMethod().getMethodName());
+        extentTestManager.startTest("TestCase Name : " + result.getTestClass().getName() + " - " +
+                result.getMethod().getMethodName())
+                .assignCategory("System Testing");
 
 //        extentTest.set(test);
     }
 
     public void onTestSuccess(ITestResult result) {
         extentTestManager.getTest().log(Status.PASS, "PASS");
+
     }
 
     public void onTestFailure(ITestResult result) {
