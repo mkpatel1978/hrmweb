@@ -42,7 +42,7 @@ public class loginPage extends basePage {
 
     public String loginSuccess() {
         driver.findElement(submitBtn).click();
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(verifyLogin));
+        wait.until(ExpectedConditions.presenceOfElementLocated(verifyLogin));
         driver.findElement(verifyLogin).click();
 
         return driver.findElement(logout).getText();
@@ -70,10 +70,10 @@ public class loginPage extends basePage {
 
     public String forgotPage(String username) {
         driver.findElement(forgotLink).click();
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(submitBtn));
+        wait.until(ExpectedConditions.presenceOfElementLocated(submitBtn));
         driver.findElement(userName).sendKeys(username);
         driver.findElement(submitBtn).click();
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(forgotMsg));
+        wait.until(ExpectedConditions.presenceOfElementLocated(forgotMsg));
 
         return driver.findElement(forgotMsg).getText();
     }

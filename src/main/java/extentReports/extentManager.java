@@ -7,7 +7,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class extentManager {
     public static final ExtentReports extentReports = new ExtentReports();
     public synchronized static ExtentReports createExtentReports() {
-        ExtentSparkReporter reporter = new ExtentSparkReporter("./test-output/poc.html");
+        ExtentSparkReporter reporter = new ExtentSparkReporter("./test-output/pocextent.html");
         reporter.config().setEncoding("utf-8");
         reporter.config().setTheme(Theme.STANDARD);
         reporter.config().setReportName("POC : HRM WEB Based Extent Report");

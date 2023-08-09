@@ -24,13 +24,12 @@ public class loginTest {
         driver = new ChromeDriver();
 
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
-//        loginPage = new loginPage(driver);
     }
 
     @Test(priority = 1, description = "Validate Success Login.")
     public void loginSuccessTest() {
         loginPage loginPage = new loginPage(driver);
+//        loginPage = new loginPage(driver);
 //        Faker faker = new Faker();
 
         //Successful login
@@ -62,8 +61,7 @@ public class loginTest {
         Faker faker = new Faker();
 
         String forgotPwdValidate = loginPage.forgotPage(faker.name().username());
-        Assert.assertEquals(forgotPwdValidate, "Reset Password link sent successfully");
-
+        Assert.assertEquals(forgotPwdValidate, "Reset Password1 link sent successfully");
     }
 
     @AfterTest
@@ -72,7 +70,5 @@ public class loginTest {
             driver.close();
             driver.quit();
         }
-
     }
-
 }

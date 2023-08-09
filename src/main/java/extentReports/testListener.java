@@ -12,21 +12,19 @@ import org.testng.annotations.IListenersAnnotation;
 import org.testng.internal.annotations.IListeners;
 
 public class testListener implements ITestListener {
-//    private static ExtentReports extentReports;
-//    public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+    private static ExtentReports extentReports;
+    public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
     public void onTestStart(ITestResult result) {
-//        ExtentTest test =
-        extentTestManager.startTest("TestCase Name : " + result.getTestClass().getName() + " - " +
-                result.getMethod().getMethodName())
+        ExtentTest test = extentTestManager.startTest("TestCase Name : " + result.getTestClass().getName() + " - " +
+                        result.getMethod().getMethodName())
                 .assignCategory("System Testing");
 
-//        extentTest.set(test);
+        extentTest.set(test);
     }
 
     public void onTestSuccess(ITestResult result) {
         extentTestManager.getTest().log(Status.PASS, "PASS");
-
     }
 
     public void onTestFailure(ITestResult result) {
