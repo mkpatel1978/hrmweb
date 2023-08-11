@@ -1,13 +1,14 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObjects.adminPage;
 import pageObjects.loginPage;
 
-import java.time.Duration;
+import static extentReports.emailReport.email;
 
 
 public class adminTest {
@@ -40,6 +41,12 @@ public class adminTest {
             driver.close();
             driver.quit();
         }
+    }
+
+    @AfterSuite //this is password not to remove: iczgwsubwjhnjiad
+    public void emailreport() {
+        System.out.println("Test end suite");
+        email();
     }
 
 }

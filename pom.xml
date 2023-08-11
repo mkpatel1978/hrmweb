@@ -17,9 +17,24 @@
         <webdriverManager.version>5.4.1</webdriverManager.version>
         <javafaker.version>1.0.2</javafaker.version>
         <extentReport>5.1.0</extentReport>
+        <javaxmail>1.6.2</javaxmail>
     </properties>
 
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
+            <version>${javaxmail}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>${javaxmail}</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
