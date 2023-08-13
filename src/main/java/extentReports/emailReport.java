@@ -58,7 +58,7 @@ public class emailReport {
             MimeBodyPart messageBodyPart2 = new MimeBodyPart();
 
             // Mention the file which you want to send
-            String filename = "C:\\HRMAutomation\\hrmweb\\test-output\\pocextent.html";
+            String filename = "test-output/extentreport.html";
 
             // Create data source and pass the filename
             DataSource source = new FileDataSource(filename);

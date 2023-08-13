@@ -15,7 +15,7 @@ import java.time.Duration;
 
 
 public class loginTest {
-    WebDriver driver;
+    public WebDriver driver;
 //    loginPage loginPage;
 
     @BeforeTest

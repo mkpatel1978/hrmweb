@@ -17,6 +17,7 @@ import java.time.Duration;
 public class loginPage extends basePage {
 
     public loginPage(WebDriver browserdriver) {
+
         super(browserdriver);
     }
 

@@ -12,7 +12,7 @@ import static extentReports.emailReport.email;
 
 
 public class adminTest {
-    WebDriver driver;
+    public WebDriver driver;
 
     @BeforeTest
     public void setup() {
@@ -46,7 +46,7 @@ public class adminTest {
     @AfterSuite //this is password not to remove: iczgwsubwjhnjiad
     public void emailreport() {
         System.out.println("Test end suite");
-        email();
+//        email();
     }
 
 }
